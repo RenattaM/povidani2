@@ -284,6 +284,9 @@ section {
   text-align: center;
   font-weight: 600;
 }
+#nabizim-title {
+  margin-bottom: 40px;
+}
 .sub {
   text-align: center;
   color: var(--muted);
@@ -429,10 +432,23 @@ section {
   font-size: 0.92rem;
   color: var(--text);
 }
+.disclaimer {
+  text-align: center;
+  max-width: 42em;
+  margin: 32px auto 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
 
 /* ── Kontakt ── */
 .contact {
-  background: var(--sage-deep);
+  background: linear-gradient(
+    150deg,
+    var(--sage-deep) 0%,
+    color-mix(in srgb, var(--sage-deep) 45%, var(--sage)) 50%,
+    var(--ink) 100%
+  );
   border-radius: 28px;
   color: var(--cream);
   padding: 52px 48px;
@@ -494,6 +510,37 @@ section {
   line-height: 1.6;
 }
 
+/* ── Ochrana osobních údajů ── */
+.policy {
+  max-width: 720px;
+}
+.policy h1 {
+  text-align: left;
+  margin-bottom: 6px;
+}
+.policy .updated {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-bottom: 40px;
+}
+.policy h2 {
+  font-size: 1.25rem;
+  margin: 36px 0 12px;
+}
+.policy h2:first-of-type {
+  margin-top: 0;
+}
+.policy p,
+.policy li {
+  color: var(--text);
+  font-size: 0.98rem;
+  margin-bottom: 12px;
+}
+.policy ul {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
 /* ── Footer ── */
 footer {
   border-top: 1px solid var(--line);
@@ -502,10 +549,19 @@ footer {
 }
 .foot {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
   font-size: 0.82rem;
   color: var(--muted);
+}
+.foot a {
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+.foot a:hover {
+  color: var(--sage-deep);
 }
 
 /* ── Scroll reveal animace ── */
