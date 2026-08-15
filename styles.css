@@ -206,18 +206,17 @@ nav a:hover {
     var(--sage-deep) 100%
   );
   border-radius: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--muted);
-  font-family: "Cormorant Garamond", serif;
-  font-style: italic;
-  font-size: 1.1rem;
   border: 6px solid #fff;
   box-shadow: 0 20px 44px rgba(51, 54, 47, 0.1);
   overflow: hidden;
 }
+.hero-photo picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .hero-photo img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -642,7 +641,7 @@ footer {
   }
   .hero-photo {
     order: 3;
-    max-width: 180px;
+    max-width: 75%;
     margin: 0 auto;
   }
   .hero .signature {

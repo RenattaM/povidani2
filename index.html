@@ -63,10 +63,52 @@
       <section class="hero">
         <div class="wrap hero-grid">
           <div class="hero-photo">
-            <img
-              src="img/setkani.jpg"
-              alt="Prostor pro tebe – místo k povídání"
-            />
+            <picture>
+              <source
+                media="(max-width: 640px)"
+                type="image/webp"
+                srcset="
+                  img/setkani-detail-480.webp  480w,
+                  img/setkani-detail-720.webp  720w
+                "
+                sizes="calc(75vw - 36px)"
+              />
+              <source
+                media="(max-width: 640px)"
+                type="image/jpeg"
+                srcset="
+                  img/setkani-detail-480.jpg  480w,
+                  img/setkani-detail-720.jpg  720w
+                "
+                sizes="calc(75vw - 36px)"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  img/setkani-480.webp  480w,
+                  img/setkani-720.webp  720w,
+                  img/setkani-960.webp  960w
+                "
+                sizes="(max-width: 840px) calc(75vw - 36px), (max-width: 1000px) calc(42.5vw - 42.5px), 383px"
+              />
+              <source
+                type="image/jpeg"
+                srcset="
+                  img/setkani-480.jpg  480w,
+                  img/setkani-720.jpg  720w,
+                  img/setkani-960.jpg  960w
+                "
+                sizes="(max-width: 840px) calc(75vw - 36px), (max-width: 1000px) calc(42.5vw - 42.5px), 383px"
+              />
+              <img
+                src="img/setkani-720.jpg"
+                width="720"
+                height="922"
+                loading="lazy"
+                decoding="async"
+                alt="Prostor pro tebe – místo k povídání"
+              />
+            </picture>
           </div>
           <div class="hero-content">
             <span class="eyebrow">Prostor pro tebe · Online i telefonicky</span>
