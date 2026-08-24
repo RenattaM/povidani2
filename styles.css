@@ -462,7 +462,7 @@ section {
 }
 .about-photo {
   aspect-ratio: 2/3;
-  max-width: 320px;
+  max-width: 260px;
   margin-left: auto;
   background: linear-gradient(
     160deg,
@@ -680,7 +680,7 @@ footer {
     text-align: center;
   }
   .about-photo {
-    max-width: 60%;
+    max-width: 50%;
     margin: 0 auto;
   }
 
