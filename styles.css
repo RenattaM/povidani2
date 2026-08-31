@@ -243,11 +243,11 @@ nav a:hover {
   letter-spacing: -0.01em;
 }
 .hero .signature {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Nunito", sans-serif;
   font-style: normal;
   font-size: 1.2rem;
   color: var(--sage-deep);
-  margin: 0 0 18px;
+  margin: 0 0 36px;
 }
 .hero p.lead {
   font-size: 1.05rem;
@@ -520,7 +520,7 @@ section {
 }
 .method {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 14px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -537,6 +537,7 @@ section {
 .method .m-icon {
   color: #b9cdb0;
   flex-shrink: 0;
+  margin-top: 3px;
 }
 .method b {
   display: block;
@@ -683,6 +684,16 @@ footer {
 
 /* ── Responzivita ── */
 @media (max-width: 840px) {
+  .hero {
+    padding: 44px 0;
+  }
+  section {
+    padding: 40px 0;
+  }
+  footer {
+    padding: 28px 0;
+  }
+
   .hamburger {
     display: flex;
     order: 1;
@@ -725,6 +736,11 @@ footer {
   .contact {
     grid-template-columns: 1fr;
     padding: 36px 26px;
+    gap: 24px;
+  }
+
+  .method {
+    padding: 16px 10px;
   }
 
   .support-card {
