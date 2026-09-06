@@ -734,6 +734,12 @@ footer {
     gap: 24px;
   }
 
+  .contact h2,
+  .contact p,
+  .invoice-info {
+    text-align: center;
+  }
+
   .method {
     padding: 16px 10px;
   }
