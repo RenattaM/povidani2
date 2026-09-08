@@ -21,6 +21,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   font-family: "Nunito", sans-serif;
@@ -44,6 +45,7 @@ body {
       transparent 70%
     ),
     var(--cream);
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -135,19 +137,23 @@ nav a:hover {
   color: #fff;
   box-shadow: 0 4px 14px rgba(169, 95, 69, 0.25);
 }
-.btn-primary:hover {
-  background: var(--rose-deep);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(169, 95, 69, 0.32);
+@media (hover: hover) {
+  .btn-primary:hover {
+    background: var(--rose-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(169, 95, 69, 0.32);
+  }
 }
 .btn-ghost {
   border: 1.5px solid var(--sage);
   color: var(--sage-deep);
   background: transparent;
 }
-.btn-ghost:hover {
-  background: var(--sage-pale);
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .btn-ghost:hover {
+    background: var(--sage-pale);
+    transform: translateY(-2px);
+  }
 }
 .nav .btn {
   padding: 10px 22px;
@@ -363,9 +369,11 @@ section {
     transform 0.2s ease,
     border-color 0.2s ease;
 }
-.mode-card:hover {
-  transform: translateX(4px);
-  border-color: var(--sage);
+@media (hover: hover) {
+  .mode-card:hover {
+    transform: translateX(4px);
+    border-color: var(--sage);
+  }
 }
 .mode-icon {
   width: 36px;
@@ -401,9 +409,11 @@ section {
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
-.step-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(51, 54, 47, 0.08);
+@media (hover: hover) {
+  .step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(51, 54, 47, 0.08);
+  }
 }
 .step-icon {
   display: flex;
@@ -493,7 +503,7 @@ section {
   color: var(--cream);
   padding: 52px 48px;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: 48px;
   align-items: center;
 }
@@ -512,6 +522,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  min-width: 0;
 }
 .method {
   display: flex;
@@ -521,28 +532,36 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 14px;
   padding: 16px 20px;
+  min-width: 0;
   transition:
     transform 0.25s ease,
     border-color 0.25s ease;
 }
-.method:hover {
-  transform: translateX(4px);
-  border-color: rgba(255, 255, 255, 0.4);
+@media (hover: hover) {
+  .method:hover {
+    transform: translateX(4px);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
 }
 .method .m-icon {
   color: #b9cdb0;
   flex-shrink: 0;
   margin-top: 3px;
 }
+.method > span {
+  min-width: 0;
+}
 .method b {
   display: block;
   color: var(--cream);
   font-size: 1.02rem;
+  overflow-wrap: anywhere;
 }
 .method .hint {
   display: block;
   font-size: 0.85rem;
   color: #aec1a6;
+  overflow-wrap: anywhere;
 }
 .invoice-info {
   font-size: 0.82rem;
@@ -575,6 +594,9 @@ section {
   color: var(--rose-deep);
   flex-shrink: 0;
 }
+.support-text {
+  min-width: 0;
+}
 .support-icon svg {
   width: 26px;
   height: 26px;
@@ -590,6 +612,7 @@ section {
   font-size: 0.98rem;
   color: var(--text);
   margin-bottom: 18px;
+  overflow-wrap: anywhere;
 }
 .account-number {
   display: inline-block;
@@ -598,7 +621,6 @@ section {
   background: var(--rose-pale);
   border-radius: 999px;
   padding: 2px 12px;
-  white-space: nowrap;
 }
 .support-link {
   font-size: 0.88rem;
@@ -630,6 +652,7 @@ section {
   color: var(--text);
   font-size: 0.98rem;
   margin-bottom: 12px;
+  overflow-wrap: anywhere;
 }
 .policy ul {
   padding-left: 20px;
@@ -819,5 +842,17 @@ footer {
   }
   .foot #copyright {
     order: 2;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact {
+    padding: 28px 18px;
+  }
+  .method {
+    padding: 14px 12px;
+  }
+  .support-card {
+    padding: 24px 18px;
   }
 }
