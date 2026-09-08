@@ -503,7 +503,7 @@ section {
   color: var(--cream);
   padding: 52px 48px;
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 48px;
   align-items: center;
 }
@@ -752,7 +752,6 @@ footer {
   }
 
   .contact {
-    grid-template-columns: 1fr;
     padding: 36px 26px;
     gap: 24px;
   }
