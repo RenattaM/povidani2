@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Diagnostika viewportu</title>
+    <style>
+      body {
+        background: #fff;
+        color: #000;
+        font-size: 28px;
+      }
+      p {
+        margin: 0 0 12px;
+      }
+      #ua {
+        font-size: 16px;
+        overflow-wrap: anywhere;
+      }
+    </style>
+  </head>
+  <body>
+    <p>window.innerWidth: <span id="innerWidth"></span></p>
+    <p>screen.width: <span id="screenWidth"></span></p>
+    <p>window.devicePixelRatio: <span id="dpr"></span></p>
+    <p>
+      document.documentElement.clientWidth:
+      <span id="clientWidth"></span>
+    </p>
+    <p>
+      document.documentElement.scrollWidth:
+      <span id="scrollWidth"></span>
+    </p>
+    <p>
+      matchMedia('(max-width: 840px)').matches:
+      <span id="matchMedia"></span>
+    </p>
+    <p id="ua">navigator.userAgent: <span id="userAgent"></span></p>
+
+    <script>
+      document.getElementById("innerWidth").textContent = window.innerWidth;
+      document.getElementById("screenWidth").textContent = screen.width;
+      document.getElementById("dpr").textContent = window.devicePixelRatio;
+      document.getElementById("clientWidth").textContent =
+        document.documentElement.clientWidth;
+      document.getElementById("scrollWidth").textContent =
+        document.documentElement.scrollWidth;
+      document.getElementById("matchMedia").textContent = window.matchMedia(
+        "(max-width: 840px)",
+      ).matches;
+      document.getElementById("userAgent").textContent = navigator.userAgent;
+    </script>
+  </body>
+</html>
